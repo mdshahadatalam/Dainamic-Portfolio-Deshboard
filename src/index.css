@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #f4f4f4;
+}
+.hidden {
+    display: none;
+}
+.action-btn {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+}
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* popop modal  */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal container */
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Open Modal Button */
+.open-modal-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Close Modal Button */
+.close-modal-btn {
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.close-modal-btnResume {
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 110px;
+}
+
+
+.table img {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 2px;
+    max-width: 100px;
+}
+.table button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
