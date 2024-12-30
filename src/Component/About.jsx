@@ -59,7 +59,7 @@ export const About = () => {
      data.append("aboutImg",aboutImg)
 
     if(id){
-        axios.put('http://localhost:3000/about/'+id,data).then(res=>{
+        axios.put('https://dainamic-portfolio-backend.vercel.app/about/'+id,data).then(res=>{
             console.log(res);
             setSubHead('')
             setHead('')
@@ -99,7 +99,7 @@ export const About = () => {
         })
     }else{
 
-        axios.post('http://localhost:3000/about',data).then(res=>{
+        axios.post('https://dainamic-portfolio-backend.vercel.app/about',data).then(res=>{
         console.log(res);
         toast.success('About Created', {
           position: "top-right",
@@ -136,7 +136,7 @@ export const About = () => {
 
     useEffect(()=>{
         async function data() {
-            let data = await axios.get('http://localhost:3000/aboutItem')
+            let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/aboutItem')
              console.log(data);
              setSubHead(data.data.subHead)
              setHead(data.data.head)
@@ -158,7 +158,7 @@ export const About = () => {
 
     <h4 className='font-serif text-center m-0'>About</h4>
  
-    <img width={50} src={`http://localhost:3000/${img}`} alt="Image" />
+    <img width={50} src={`https://dainamic-portfolio-backend.vercel.app/${img}`} alt="Image" />
     <div className="mb-2">
     <label className="block text-sm font-semibold text-gray-700 mb-2" htmlFor="file-upload">
       Upload File

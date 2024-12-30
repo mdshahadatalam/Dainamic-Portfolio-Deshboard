@@ -43,7 +43,7 @@ export const Resume = () => {
     const handleSubmit =()=>{
      
     if(id){
-        axios.put(`http://localhost:3000/resumes/${id}`,{
+        axios.put(`https://dainamic-portfolio-backend.vercel.app/resumes/${id}`,{
             subHead:subHead,
             head:head,
             paragraph:paragraph
@@ -83,7 +83,7 @@ export const Resume = () => {
         })
 
     }else{
-        axios.post('http://localhost:3000/resume',{
+        axios.post('https://dainamic-portfolio-backend.vercel.app/resume',{
             subHead:subHead,
             head:head,
             paragraph:paragraph
@@ -130,7 +130,7 @@ export const Resume = () => {
 
     useEffect(()=>{
         async function data() {
-        const data = await axios.get('http://localhost:3000/resumeItem')
+        const data = await axios.get('https://dainamic-portfolio-backend.vercel.app/resumeItem')
         // console.log(data.data)
         setList(data.data)
         }
@@ -140,7 +140,7 @@ export const Resume = () => {
    
     const handleDelete =(item)=>{
     // console.log(item._id);
-    axios.delete(`http://localhost:3000/resume/${item._id}`).then(res=>{
+    axios.delete(`https://dainamic-portfolio-backend.vercel.app/resume/${item._id}`).then(res=>{
         console.log(res);
         toast.success('Resume Delete', {
             position: "top-right",
@@ -155,7 +155,7 @@ export const Resume = () => {
             });
             
             async function data() {
-                const data = await axios.get('http://localhost:3000/resumeItem')
+                const data = await axios.get('https://dainamic-portfolio-backend.vercel.app/resumeItem')
                 // console.log(data.data)
                 setList(data.data)
                 }

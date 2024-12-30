@@ -27,7 +27,7 @@ export const Banner = () => {
       //  console.log(data.get("buttonText"));
        
       if(id){
-        axios.put('http://localhost:3000/banner/'+id,data).then(res=>{
+        axios.put('https://dainamic-portfolio-backend.vercel.app/banner/'+id,data).then(res=>{
           console.log(res)
           toast.success('Banner updated', {
             position: "top-right",
@@ -56,7 +56,7 @@ export const Banner = () => {
             });
          })
       }else{
-        axios.post('http://localhost:3000/banner',data).then(res=>{
+        axios.post('https://dainamic-portfolio-backend.vercel.app/banner',data).then(res=>{
           console.log(res)
           toast.success('Banner Created', {
             position: "top-right",
@@ -118,7 +118,7 @@ export const Banner = () => {
 
     useEffect(()=>{
       async function data() {
-        let data = await axios.get('http://localhost:3000/bannerItem')
+        let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/bannerItem')
         // console.log(data.data.subHead)
         setSubhead(data.data.subHead)
         setHead(data.data.head)
@@ -140,7 +140,7 @@ export const Banner = () => {
  <div className="p-6 bg-white rounded-lg shadow-lg w-full max-w-lg mx-auto">
  <h4 className='font-serif text-center m-0'>Banner</h4>
 
- <img width={50} src={`http://localhost:3000/${bannerImg}`} alt="images" />
+ <img width={50} src={`https://dainamic-portfolio-backend.vercel.app/${bannerImg}`} alt="images" />
 
  <div className="mb-2">
     <label className="block text-sm font-semibold text-gray-700 mb-2" htmlFor="file-upload">

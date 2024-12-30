@@ -23,7 +23,7 @@ export const Navbar = () => {
     
 
     if(id){
-      axios.put('http://localhost:3000/navbar/'+id,data).then(res=>{
+      axios.put('https://dainamic-portfolio-backend.vercel.app/navbar/'+id,data).then(res=>{
        console.log(res)
        setMenu('')
        setButtonText('')
@@ -59,7 +59,7 @@ export const Navbar = () => {
         
       })
     }else{
-    axios.post('http://localhost:3000/navbar',data).then(res=>{
+    axios.post('https://dainamic-portfolio-backend.vercel.app/navbar',data).then(res=>{
      console.log(res)
      toast.success('Navbar Created', {
       position: "top-right",
@@ -118,7 +118,7 @@ export const Navbar = () => {
 
   useEffect(()=>{
     async function data(){
-      let data = await axios.get('http://localhost:3000/navItem')
+      let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/navItem')
       console.log(data);
       setMenu(data.data.menu)
       setButtonText(data.data.buttonText)
@@ -137,7 +137,7 @@ export const Navbar = () => {
   <div className="p-6 bg-white rounded-lg shadow-lg w-full max-w-lg mx-auto">
      <h4 className='font-serif text-center m-0'>Navbar</h4>
 
-     <img  src={`http://localhost:3000/${logoImg}`} alt="logo Image" />
+     <img  src={`https://dainamic-portfolio-backend.vercel.app/${logoImg}`} alt="logo Image" />
   <div className="mb-2">
     <label className="block text-sm font-semibold text-gray-700 mb-2" htmlFor="file-upload">
       Upload File

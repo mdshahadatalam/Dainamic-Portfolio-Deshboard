@@ -14,7 +14,7 @@ export const Portfolio = () => {
     const handleSubmit =()=>{
         let data = new FormData()
         data.append("portImg",PortImg)
-        axios.post('http://localhost:3000/portfolio',data).then(res=>{
+        axios.post('https://dainamic-portfolio-backend.vercel.app/portfolio',data).then(res=>{
             console.log(res.data)
             toast.success('Portfolio Created', {
                 position: "top-right",
@@ -48,7 +48,7 @@ export const Portfolio = () => {
     const handleDelete =(item)=>{
         console.log(item._id);
 
-        axios.delete(`http://localhost:3000/portfolios/${item._id}`).then(res=>{
+        axios.delete(`https://dainamic-portfolio-backend.vercel.app/portfolios/${item._id}`).then(res=>{
             console.log(res);
             toast.success('Portfolio Delete', {
                 position: "top-right",
@@ -62,7 +62,7 @@ export const Portfolio = () => {
                 // transition: Bounce,
                 });
                 async function data(){
-                    let data = await axios.get('http://localhost:3000/portItem')
+                    let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/portItem')
                     console.log(data);
                     setList(data.data)
                     
@@ -94,7 +94,7 @@ export const Portfolio = () => {
 
     useEffect(()=>{
         async function data(){
-            let data = await axios.get('http://localhost:3000/portItem')
+            let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/portItem')
             console.log(data);
             setList(data.data)
             
@@ -149,7 +149,7 @@ export const Portfolio = () => {
                     <img 
                         className="img-fluid" 
                         width={80} 
-                        src={`http://localhost:3000/${item.portImg}`} 
+                        src={`https://dainamic-portfolio-backend.vercel.app/${item.portImg}`} 
                         alt="item" 
                     />
                 </td>
