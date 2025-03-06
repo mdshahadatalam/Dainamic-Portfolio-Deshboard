@@ -30,7 +30,7 @@ export const Contact = () => {
   const handleSubmit =()=>{
     console.log(name,email,phone,subject,message);
 
-    axios.post('https://dainamic-portfolio-backend.vercel.app/emailSend',{name,email,phone,subject,message}).then((res)=>{
+    axios.post('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/emailSend',{name,email,phone,subject,message}).then((res)=>{
       console.log(res);  
       setName('')
       setEmail('')

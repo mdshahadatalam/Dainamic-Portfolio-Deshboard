@@ -63,7 +63,7 @@ export const Testimonial = () => {
       data.append("tesImg",testiImg)
 
       if(id){
-        axios.put(`https://dainamic-portfolio-backend.vercel.app/testimonials/${id}`,data).then(res=>{
+        axios.put(`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/testimonials/${id}`,data).then(res=>{
           console.log(res);
           setIsOpen(false)
           
@@ -100,7 +100,7 @@ export const Testimonial = () => {
         })
 
       }else{
-        axios.post('https://dainamic-portfolio-backend.vercel.app/testimonial',data).then(res=>{
+        axios.post('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/testimonial',data).then(res=>{
   
           console.log(res.data)
           setSubHead('')
@@ -140,7 +140,7 @@ export const Testimonial = () => {
 
    useEffect(()=>{
     async function data() {
-        const data = await axios.get('https://dainamic-portfolio-backend.vercel.app/testimonialItem')
+        const data = await axios.get('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/testimonialItem')
         console.log(data.data);
         setList(data.data)
         
@@ -153,7 +153,7 @@ export const Testimonial = () => {
    const handleDelete =(item)=>{
      console.log(item._id);
 
-     axios.delete(`https://dainamic-portfolio-backend.vercel.app/testimonial/${item._id}`).then(res=>{
+     axios.delete(`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app//testimonial/${item._id}`).then(res=>{
       console.log(res);
       toast.success('Testimonial Delete', {
         position: "top-right",
@@ -168,7 +168,7 @@ export const Testimonial = () => {
         });
 
         async function data() {
-          const data = await axios.get('https://dainamic-portfolio-backend.vercel.app/testimonialItem')
+          const data = await axios.get('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/testimonialItem')
           console.log(data.data);
           setList(data.data)
           
@@ -297,7 +297,7 @@ export const Testimonial = () => {
                   <tr>
                     <td>{index+1}</td>
                   <td class="image-column">
-                      {item.showImg ? <img src={`https://dainamic-portfolio-backend.vercel.app/${item.tesImg}`} alt="Placeholder Image"/>: "Preview" }  
+                      {item.showImg ? <img src={`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/${item.tesImg}`} alt="Placeholder Image"/>: "Preview" }  
                   </td>
                   <td className="title-column">{item.subHead}</td>
                   <td className="title-column">{item.Headers}</td>

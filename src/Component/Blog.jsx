@@ -59,7 +59,7 @@ export const Blog = () => {
       data.append("blogImg",blogImg)
 
        if(id){
-        axios.put(`https://dainamic-portfolio-backend.vercel.app/blog/${id}`,data).then(res=>{
+        axios.put(`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/blog/${id}`,data).then(res=>{
           console.log(res);
           setIsOpen(false)
           setDate('')
@@ -95,7 +95,7 @@ export const Blog = () => {
         })
 
        }else{
-        axios.post('https://dainamic-portfolio-backend.vercel.app/blog',data).then(res=>{
+        axios.post('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/blog',data).then(res=>{
           console.log(res);
           setDate('')
           setSubHead('')
@@ -134,7 +134,7 @@ export const Blog = () => {
 
  useEffect(()=>{
     async function data() {
-        let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/blogItem')
+        let data = await axios.get('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/blogItem')
         // console.log(data.data)
         setList(data.data)
         
@@ -144,7 +144,7 @@ export const Blog = () => {
 
   const handleDelete =(item)=>{
       // console.log(item._id);
-      axios.delete(`https://dainamic-portfolio-backend.vercel.app/blogs/${item._id}`).then(res=>{
+      axios.delete(`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/blogs/${item._id}`).then(res=>{
         console.log(res.data);
         toast.success('Blog Delete', {
           position: "top-right",
@@ -159,7 +159,7 @@ export const Blog = () => {
           });
 
           async function data() {
-            let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/blogItem')
+            let data = await axios.get('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/blogItem')
             // console.log(data.data)
             setList(data.data)
             
@@ -286,7 +286,7 @@ export const Blog = () => {
                   <tr>
                     <td>{index+1}</td>
                   <td class="image-column">
-                      {item.showImg ? <img width={60} src={`https://dainamic-portfolio-backend.vercel.app/${item.blogImg}`} alt="Placeholder Image"/>: "Preview" }  
+                      {item.showImg ? <img width={60} src={`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/${item.blogImg}`} alt="Placeholder Image"/>: "Preview" }  
                   </td>
                   <td className="title-column">{item.data}</td>
                   <td className="title-column">{item.subHead}</td>
@@ -322,7 +322,7 @@ export const Blog = () => {
                            <h4 className='font-serif text-center m-0'>Blog</h4>
                             
 
-                            <img width={60} src={`https://dainamic-portfolio-backend.vercel.app/${img}`} alt="image" />
+                            <img width={60} src={`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/${img}`} alt="image" />
                              
   
                            <div className="mb-2">

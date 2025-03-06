@@ -56,7 +56,7 @@ const closeModal = () => setIsOpen(false);
    data.append("serImg",serviceImg)
 
    if(id){
-    axios.put(`https://dainamic-portfolio-backend.vercel.app/services/${id}`,data).then(res=>{
+    axios.put(`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/services/${id}`,data).then(res=>{
 
       console.log(res);
       setIsOpen(false);
@@ -95,7 +95,7 @@ const closeModal = () => setIsOpen(false);
     })
 
    }else{
-    axios.post('https://dainamic-portfolio-backend.vercel.app/service',data).then(res=>{
+    axios.post('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/service',data).then(res=>{
       console.log(res);
       setSubHed('')
       setHead('')
@@ -134,7 +134,7 @@ const closeModal = () => setIsOpen(false);
 
   useEffect(()=>{
    async  function data(){
-        let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/serviceItem')
+        let data = await axios.get('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/serviceItem')
         // console.log(data.data);
         setList(data.data)
         
@@ -145,7 +145,7 @@ const closeModal = () => setIsOpen(false);
   const handleDelete =(item)=>{
    console.log(item._id);
 
-   axios.delete(`https://dainamic-portfolio-backend.vercel.app/service/${item._id}`).then(res=>{
+   axios.delete(`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/service/${item._id}`).then(res=>{
 
     console.log(res.data);
 
@@ -163,7 +163,7 @@ const closeModal = () => setIsOpen(false);
 
 
       async  function data(){
-        let data = await axios.get('https://dainamic-portfolio-backend.vercel.app/serviceItem')
+        let data = await axios.get('https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app//serviceItem')
         // console.log(data.data);
         setList(data.data)
         
@@ -276,7 +276,7 @@ const closeModal = () => setIsOpen(false);
                   <tr>
                     <td>{index+1}</td>
                   <td class="image-column">
-                      {item.showImg ? <img src={`https://dainamic-portfolio-backend.vercel.app/${item.serImg}`} alt="Placeholder Image"/>: "Preview" }  
+                      {item.showImg ? <img src={`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/${item.serImg}`} alt="Placeholder Image"/>: "Preview" }  
                   </td>
                   <td className="title-column">{item.subHead}</td>
                   <td className="title-column">{item.head}</td>
@@ -310,7 +310,7 @@ const closeModal = () => setIsOpen(false);
                           <div className="p-6 bg-white rounded-lg shadow-lg w-full max-w-lg mx-auto">
                                  <h4 className='font-serif text-center m-0'>Service</h4>
 
-                                 <img src={`https://dainamic-portfolio-backend.vercel.app/${img}`} alt="" />
+                                 <img src={`https://dainamic-portfolio-backend-git-main-md-shahadat-alams-projects.vercel.app/${img}`} alt="" />
 
                       <div className="mb-2">
                      <label className="block text-sm font-semibold text-gray-700 mb-2" htmlFor="file-upload">
